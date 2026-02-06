@@ -7,7 +7,7 @@ body {
 .hero {
     position: relative;
     height: 90vh;
-    background: url('DSC09747.jpg') center/cover no-repeat;
+    background: url('hero.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
