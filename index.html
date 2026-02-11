@@ -1,25 +1,506 @@
-<div style="text-align:center; margin:60px 0;">
-  <a href="https://forms.gle/DuNfwkXwZiWEcKmh6"
-     target="_blank"
-     style="background:#000; color:#fff; padding:18px 36px; 
-            text-decoration:none; font-size:16px; 
-            letter-spacing:0.5px; display:inline-block;">
-    Submit Plans for Project Consideration
-  </a>
-</div>
-<div style="text-align:center; margin-top:30px;">
-  <p style="font-size:15px; color:#666;">
-    Prefer to ask a question first?
-  </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Springer Millworks — Project Intake &amp; Mill Introduction</title>
+  <meta name="description" content="Determine if a custom reclaimed or pre-finished wood package fits your project. Independent project intake and mill introduction for architects, designers, and builders." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #FCFBF9;
+      --surface: #FFFFFF;
+      --text: #1A1A1A;
+      --text-secondary: #4A4A4A;
+      --text-muted: #7A7A7A;
+      --accent: #2C2C2C;
+      --border: #E8E4DF;
+      --border-light: #F0ECE7;
+      --warm-bg: #F5F2ED;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
 
-  <a href="mailto:josh@springermillworks.com"
-     style="color:#000; text-decoration:none; border-bottom:1px solid #ccc; margin-right:20px;">
-    Email Josh
-  </a>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <a href="https://calendly.com/YOUR-LINK-HERE"
-     target="_blank"
-     style="color:#000; text-decoration:none; border-bottom:1px solid #ccc;">
-    Schedule a short intro call
-  </a>
-</div>
+    body {
+      font-family: var(--sans);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .page { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Top bar ── */
+    .topbar {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .logo {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+    .topbar-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 72px 0 56px;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.12;
+      color: var(--text);
+      max-width: 780px;
+      margin-bottom: 24px;
+      font-weight: 400;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 680px;
+      line-height: 1.65;
+      margin-bottom: 36px;
+    }
+    .hero-sub p { margin-bottom: 12px; }
+    .hero-sub p:last-child { margin-bottom: 0; }
+
+    /* ── Buttons ── */
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 16px 28px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      border: none;
+      transition: background 0.2s ease, transform 0.15s ease;
+    }
+    .btn-primary:hover {
+      background: #444;
+      transform: translateY(-1px);
+    }
+
+    .meta-line {
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ── Section dividers ── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 0;
+    }
+
+    /* ── Content sections ── */
+    .section {
+      padding: 52px 0;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .section h2 {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 400;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    .section p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin-bottom: 12px;
+    }
+    .section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .section ul li {
+      font-size: 16px;
+      color: var(--text-secondary);
+      padding: 8px 0 8px 20px;
+      position: relative;
+    }
+    .section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 16px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--border);
+    }
+
+    /* ── Two-column grid ── */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    @media (max-width: 700px) {
+      .grid-2 { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* ── Card (callout box) ── */
+    .callout {
+      background: var(--warm-bg);
+      border-left: 3px solid var(--border);
+      padding: 20px 22px;
+      margin-top: 20px;
+    }
+    .callout p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+    .callout strong {
+      color: var(--text);
+    }
+
+    /* ── Steps ── */
+    .steps { counter-reset: step; margin-top: 8px; }
+    .step {
+      display: flex;
+      gap: 18px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .step:last-child { border-bottom: none; }
+    .step-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .step-content strong {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+    .step-content span {
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+
+    /* ── Mill disclosure ── */
+    .mill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 32px;
+      margin-top: 8px;
+    }
+    .mill-card p {
+      max-width: none;
+    }
+
+    /* ── CTA section ── */
+    .cta-section {
+      background: var(--warm-bg);
+      border: 1px solid var(--border);
+      padding: 48px 40px;
+      text-align: center;
+      margin: 8px 0 0;
+    }
+    .cta-section .section-label { margin-bottom: 12px; }
+    .cta-section h2 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 20px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-section .btn-primary { margin-bottom: 20px; }
+    .cta-details {
+      max-width: 480px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .cta-details ul {
+      list-style: none;
+      padding: 0;
+    }
+    .cta-details ul li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      padding: 5px 0 5px 18px;
+      position: relative;
+    }
+    .cta-details ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .cta-acknowledgment {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-style: italic;
+      max-width: 520px;
+      margin: 16px auto 0;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    /* ── Secondary contact ── */
+    .secondary-contact {
+      text-align: center;
+      padding: 32px 0;
+    }
+    .secondary-contact p {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      max-width: none;
+    }
+    .secondary-contact a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1px;
+      transition: border-color 0.2s ease;
+    }
+    .secondary-contact a:hover {
+      border-bottom-color: var(--text);
+    }
+    .contact-sep {
+      display: inline-block;
+      margin: 0 14px;
+      color: var(--border);
+    }
+
+    /* ── Footer ── */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      text-align: center;
+    }
+    .footer-name {
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+    .footer-tagline {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .footer a {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .footer a:hover {
+      color: var(--text);
+    }
+
+    /* ── Fade-in on load ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero, .section, .cta-section, .secondary-contact {
+      animation: fadeUp 0.6s ease both;
+    }
+    .section:nth-child(2) { animation-delay: 0.08s; }
+    .section:nth-child(3) { animation-delay: 0.12s; }
+    .section:nth-child(4) { animation-delay: 0.16s; }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- ═══ TOP BAR ═══ -->
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="logo">Springer Millworks</div>
+        <div class="topbar-label">Independent Project Intake &amp; Mill Introduction</div>
+      </div>
+    </header>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero">
+      <h1>Determine if a custom reclaimed or pre-finished wood package fits your project — before specifications are locked.</h1>
+      <div class="hero-sub">
+        <p>Springer Millworks routes qualified residential and commercial projects to the appropriate mill by collecting early project information and coordinating direct introductions.</p>
+        <p>We work upstream — before specs lock — to connect the right projects with the right mill, at the right phase.</p>
+      </div>
+      <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdnLtKMVzd9FKuEYF1Uo2pt8xFZIi_xbqqwmCI986xHz_gSMA/viewform" target="_blank" rel="noopener">Submit Plans for Project Consideration</a>
+      <div class="meta-line">No obligation. No quoting through us.</div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ═══ WHO THIS IS FOR + WHY THIS EXISTS (side by side) ═══ -->
+    <section class="section">
+      <div class="grid-2">
+        <div>
+          <div class="section-label">Who This Is For</div>
+          <p>This intake process is for:</p>
+          <ul>
+            <li>Architects exploring exterior or interior wood applications</li>
+            <li>Designers coordinating finishes across multiple scopes</li>
+            <li>Builders validating feasibility before pricing</li>
+            <li>Owners or developers seeking early clarity</li>
+          </ul>
+          <p style="margin-top:18px;font-weight:500;color:var(--text);">Typical project types</p>
+          <ul>
+            <li>Custom residential</li>
+            <li>Mountain modern homes</li>
+            <li>Hospitality and commercial feature applications</li>
+          </ul>
+        </div>
+        <div>
+          <div class="section-label">Why This Exists</div>
+          <p>Custom wood packages create problems when introduced too late:</p>
+          <ul>
+            <li>Profiles and applications lock prematurely</li>
+            <li>Finish intent doesn't translate across exterior and interior uses</li>
+            <li>Lead times surface after approvals</li>
+            <li>Teams discover misalignment after design decisions are final</li>
+          </ul>
+          <div class="callout" style="margin-top:24px;">
+            <p>This process introduces the right mill earlier — without sales pressure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ═══ WHAT SUBMITTING PLANS DOES ═══ -->
+    <section class="section">
+      <div class="section-label">What Submitting Plans Does</div>
+      <p>Submitting plans allows us to:</p>
+      <ul>
+        <li>Understand basic project scope and application intent</li>
+        <li>Confirm whether the project is appropriate for mill review</li>
+        <li>Route qualified projects directly to the mill for evaluation</li>
+      </ul>
+      <div class="callout">
+        <p><strong>Important:</strong> Springer Millworks does not provide architectural, technical, or pricing review. Plans are collected to coordinate mill consideration and introduction.</p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ═══ HOW IT WORKS ═══ -->
+    <section class="section">
+      <div class="section-label">How It Works</div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <strong>Submit basic project information and plans</strong>
+            <span>PDFs, elevations, or schematic sets are sufficient.</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <strong>Projects are reviewed by the mill</strong>
+            <span>For fit, feasibility, and next steps.</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <strong>Qualified teams are contacted by the mill</strong>
+            <span>For pricing, samples, and technical coordination.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ═══ ABOUT THE MILL ═══ -->
+    <section class="section">
+      <div class="section-label">About the Mill</div>
+      <div class="mill-card">
+        <p>Projects that align with scope and application are introduced to <strong>Origin Millworks</strong>, a U.S.-based mill specializing in custom reclaimed and pre-finished wood packages for residential and commercial projects.</p>
+        <p style="margin-top:12px;">All pricing, quoting, and production are handled by the mill.</p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ═══ CTA SECTION ═══ -->
+    <div class="cta-section">
+      <div class="section-label">Submit Plans for Project Consideration</div>
+      <h2>Confirm whether your project is appropriate for mill review — before time gets wasted.</h2>
+      <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdnLtKMVzd9FKuEYF1Uo2pt8xFZIi_xbqqwmCI986xHz_gSMA/viewform" target="_blank" rel="noopener">Submit Plans</a>
+      <div class="cta-details">
+        <ul>
+          <li>Confirms whether the project is appropriate for mill review</li>
+          <li>Prevents wasted time on poor-fit applications</li>
+          <li>Creates a direct introduction when aligned</li>
+        </ul>
+      </div>
+      <p class="cta-acknowledgment">By submitting, you acknowledge plans are collected to coordinate mill review and that Springer Millworks does not provide pricing or technical evaluation.</p>
+    </div>
+
+    <!-- ═══ SECONDARY CONTACT ═══ -->
+    <div class="secondary-contact">
+      <p><strong>Prefer to ask a question first?</strong></p>
+      <div>
+        <a href="mailto:josh@springermillworks.com">Email Josh</a>
+      </div>
+    </div>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+      <div class="footer-name">Springer Millworks</div>
+      <div class="footer-tagline">Independent project intake &amp; mill introduction</div>
+      <a href="mailto:josh@springermillworks.com">josh@springermillworks.com</a>
+    </footer>
+
+  </div>
+
+</body>
+</html>
