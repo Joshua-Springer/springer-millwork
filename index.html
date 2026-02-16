@@ -232,6 +232,7 @@
       display: flex;
       gap: 12px;
       padding: 0 0 24px;
+      overflow-x: auto;
     }
     .showcase-card {
       flex: 0 0 280px;
@@ -467,7 +468,7 @@
       font-weight: 300;
     }
     .cta-details ul li::before {
-      content: '→';
+      content: '\2192';
       position: absolute;
       left: 0;
       color: var(--accent-warm);
@@ -548,22 +549,6 @@
     .section { animation: fadeUp 0.6s ease 0.05s both; }
     .mill-section { animation: fadeUp 0.6s ease 0.1s both; }
     .cta-section { animation: fadeUp 0.6s ease 0.1s both; }
-
-    /* ── Image placeholders (remove when real images added) ── */
-    .placeholder-img {
-      width: 100%;
-      height: 100%;
-      background: var(--warm-bg-deep);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      color: var(--text-muted);
-      letter-spacing: 0.04em;
-      font-weight: 300;
-      text-align: center;
-      padding: 12px;
-    }
   </style>
 </head>
 <body>
@@ -592,18 +577,16 @@
           <div class="meta-line">No obligation. No quoting through us. Just a direct introduction.</div>
         </div>
         <div class="hero-images">
-          <!-- REPLACE: Use actual Origin Millworks product/project images -->
-          <!-- Recommended: 1 tall vertical image left, 2 smaller right -->
           <div class="img-block">
-            <div class="placeholder-img">↑ Replace with vertical<br>project photo<br>(e.g., installed siding<br>on mountain home)</div>
-            <span class="img-caption">Custom weathered siding — Park City, UT</span>
+            <img src="images/hero-project.jpg" alt="Mountain modern home with custom wood siding" />
+            <span class="img-caption">Custom pre-finished siding</span>
           </div>
           <div class="img-block">
-            <div class="placeholder-img">↑ Product close-up<br>(e.g., barnwood texture)</div>
+            <img src="images/hero-barnwood.jpg" alt="Reclaimed barnwood texture close-up" />
             <span class="img-caption">Reclaimed barnwood</span>
           </div>
           <div class="img-block">
-            <div class="placeholder-img">↑ Interior application<br>(e.g., ceiling or beams)</div>
+            <img src="images/hero-interior.jpg" alt="Interior reclaimed wood box beams with chandelier" />
             <span class="img-caption">Interior box beams</span>
           </div>
         </div>
@@ -617,30 +600,29 @@
       <div class="section-label" style="padding-top:48px; margin-bottom:16px;">Product Lines</div>
     </div>
     <div class="showcase-strip" style="padding-left: max(28px, calc((100vw - 1080px)/2 + 28px));">
-      <!-- REPLACE: Use actual product line images from Origin Millworks -->
       <div class="showcase-card">
-        <div class="placeholder-img">↑ Barnwood collection<br>product image</div>
+        <img src="images/showcase-barnwood.jpg" alt="Barnwood collection" />
         <div class="showcase-label">
           <strong>Barnwood</strong>
           <span>Naturally aged reclaimed material</span>
         </div>
       </div>
       <div class="showcase-card">
-        <div class="placeholder-img">↑ Weathered collection<br>product image</div>
+        <img src="images/showcase-weathered.jpg" alt="Weathered collection" />
         <div class="showcase-label">
           <strong>Weathered</strong>
           <span>Multi-step patina process</span>
         </div>
       </div>
       <div class="showcase-card">
-        <div class="placeholder-img">↑ Natural collection<br>product image</div>
+        <img src="images/showcase-natural.jpg" alt="Natural pre-finished collection" />
         <div class="showcase-label">
           <strong>Natural Pre-Finished</strong>
           <span>Semi-transparent, grain-forward</span>
         </div>
       </div>
       <div class="showcase-card">
-        <div class="placeholder-img">↑ Installed project<br>exterior photo</div>
+        <img src="images/showcase-installed.jpg" alt="Installed weathered wood siding with stone detail" />
         <div class="showcase-label">
           <strong>Installed</strong>
           <span>Siding, soffit, fascia &amp; trim</span>
@@ -738,8 +720,7 @@
       <div class="section-label">About the Mill</div>
       <div class="mill-card">
         <div class="mill-card-image">
-          <!-- REPLACE: Use Origin Millworks facility or hero product image -->
-          <div class="placeholder-img">↑ Origin Millworks<br>facility or signature<br>product image</div>
+          <img src="images/mill-hero.jpg" alt="Origin Millworks mountain west project" />
         </div>
         <div class="mill-card-content">
           <h3>Origin Millworks</h3>
